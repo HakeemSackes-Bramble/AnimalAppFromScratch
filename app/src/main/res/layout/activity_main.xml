@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="nyc.c4q.hakeemsackes_bramble.animalappfromscratch.MainActivity">
 
-    <fragment
+    <FrameLayout
         android:id="@+id/main_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

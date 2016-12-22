@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "animals": [
+    {
+      "name": "Monkey",
+      "textColor": "magenta",
+      "background": "teal"
+    },
+    {
+      "name": "Monkey",
+      "textColor": "magenta",
+      "background": "teal"
+    },
+    {
+      "name": "Cow",
+      "textColor": "black",
+      "background": "blue"
+    },
+    {
+      "name": "Blue Jay",
+      "textColor": "purple",
+      "background": "cyan"
+    },
+    {
+      "name": "Monkey",
+      "textColor": "magenta",
+      "background": "teal"
+    }
+  ]
+}

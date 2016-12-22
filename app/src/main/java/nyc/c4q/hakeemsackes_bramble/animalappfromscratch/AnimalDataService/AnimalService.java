@@ -9,6 +9,6 @@ import retrofit2.http.GET;
 
 public interface AnimalService {
 
-    @GET("cgi-bin/12_21_2016_exam.pl")
+    @GET("12_21_2016_exam.pl")
     Call<AnimalData> getAnimalData();
 }

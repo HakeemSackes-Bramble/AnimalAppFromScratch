@@ -1,6 +1,7 @@
 package nyc.c4q.hakeemsackes_bramble.animalappfromscratch;
 
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -33,14 +34,12 @@ public class MainFragment extends android.support.v4.app.Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getAnimalData();
-        new AnimalAdapter(animals);
-
     }
 
     public static void getAnimalData() {
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://jsjrobotics.nyc/")
+                .baseUrl("http://jsjrobotics.nyc/cgi-bin/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         AnimalService service = retrofit.create(AnimalService.class);
@@ -67,12 +66,15 @@ public class MainFragment extends android.support.v4.app.Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
         root = inflater.inflate(R.layout.fragment_layout, parent, false);
         recyclerView = (RecyclerView) root.findViewById(R.id.list);
+        recyclerView.setAdapter(new AnimalAdapter(animals));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
         return root;
     }
 
     @Override
     public void onStart() {
         super.onStart();
+
     }
 
 }

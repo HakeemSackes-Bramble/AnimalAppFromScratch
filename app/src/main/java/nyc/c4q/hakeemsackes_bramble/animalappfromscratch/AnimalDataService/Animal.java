@@ -4,7 +4,7 @@ package nyc.c4q.hakeemsackes_bramble.animalappfromscratch.AnimalDataService;
  * Created by hakeemsackes-bramble on 12/21/16.
  */
 public class Animal {
-    String name;
+    String mName;
     String textColor;
 
     public String getBackground() {
@@ -16,11 +16,11 @@ public class Animal {
     }
 
     public String getmName() {
-        return name;
+        return mName;
     }
 
     public void setmName(String name) {
-        this.name = name;
+        this.mName = name;
     }
 
     public String getTextColor() {
